@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="./images/favicon.png">
+  <title>Cell to Self</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <!-- Hamburger Icon -->
+      <img src="./assets/images/icon-menu.svg" alt="mobile menu" class="mobile-menu" id="menu-btn">
+
+      <a class="home-link" href="index.html">
+        <img src="./assets/images/logo.png" alt="logo" class="logo">
+      </a>
+      <ul id="nav-links">
+        <li><a class="nav" href="index.html">Home</a></li>
+        <li><a class="nav" href="preview.html">Preview</a></li>
+        <li><a class="nav" href="about.html">About</a></li>
+        <li><a class="nav" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <div class="popup">
+        <img src="./assets/images/icon-cart.svg" alt="shopping cart" class="cart-icon" id="cart">
+        <div class="cart-qty"></div>
+        <aside id="aside" class="empty">
+          <h6>Pre-order</h6>
+          <div class="img-head empty" id="img-head">
+            <img src="./assets/images/book-1 thumbnail.png" alt="book cover" class="cart-pic">
+            <div class="popup-text">
+              <p class="cart-text">404: Life Not Found</p>
+              <p class="cart-amt" id="cart-amt"></p>
+            </div>
+            <img src="./assets/images/icon-delete.svg" alt="delete" id="delete">
+            <h3>
+              Checkout Coming Soon</h3>
+          </div>
+          <div class="show empty" id="empty">
+            <p class="empty-text">Your cart is empty.</p>
+          </div>
+        </aside>
+      </div>
+      <img src="./assets/images/image-avatar.png" alt="profile picture" class="profile-pic">
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="product-images">
+      <div class="large-pic">
+        <img src="./assets/images/icon-previous.svg" alt="previous" id="previous" class="move">
+        <img src="./assets/images/icon-next.svg" alt="previous" id="next" class="move">
+      </div>
+      <img src="./assets/images/book-1.png" alt="book cover" id="books1" class="img-large img-main">
+      <div class="thumbnail-box">
+        <img src="./assets/images/book-1 thumbnail.png" data-largeimage="./assets/images/book-1.png" alt="book cover"
+          id="book1" class="img-thumb img-active">
+        <img src="./assets/images/book-2 thumbnail.png" data-largeimage="./assets/images/book-2.png"
+          alt="terminal version of book cover" id="book2" class="img-thumb">
+        <img src="./assets/images/book-3 thumbnail.png" data-largeimage="./assets/images/book-3.png" alt="book quote"
+          id="book3" class="img-thumb">
+        <img src="./assets/images/book-4 thumbnail.png" data-largeimage="./assets/images/book-4.png"
+          alt="book back cover" id="book4" class="img-thumb img-last">
+      </div>
+    </section>
+    <section class="text">
+      <div class="bookinfo">
+
+        <p class="terminal">
+          MEMOIR IN PROGRESS
+        </p>
+        <h1>404: Life Not Found</h1>
+        <h2 class="tagline">Debugging My Way Out of Prison</h2>
+        <h4>Welcome to my life, full of errors.</h4>
+      </div>
+
+      <p class="terminal">
+        <span class="prompt">>></span>
+        <span class="typing">SYSTEM REBUILD IN PROGRESS</span>
+      </p>
+      <p>
+        A memoir about mistakes, second chances, and learning to rewrite the code that runs my life.
+        With nothing but documentation and determination, my story takes an unexpected journey from
+        prison to programming in pursuit of a second chance.
+      </p>
+      <div class="amount">
+        <div class="price-disc">
+          <h2>
+            $20.00
+          </h2>
+          <h3 class="pct">
+            50%
+          </h3>
+        </div>
+        <h4>
+          $40.00
+        </h4>
+      </div>
+      <div class="input-btn">
+        <div class="quantity">
+          <img src="./assets/images/icon-minus.svg" alt="decrease" class="minus">
+          <img src="./assets/images/icon-plus.svg" alt="increase" class="plus">
+          <input type="text" value="0" class="qty">
+        </div>
+        <button type="button" id="add-cart">
+          <svg xmlns="http://www.w3.org/2000/svg" class="cart-btn" width="22" height="20">
+            <path class="cart-btn"
+              d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+              fill="#69707D" fill-rule="nonzero" />
+          </svg>
+          Pre-order Book</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- The Modal/Lightbox -->
+  <div id="myModal" class="modal">
+    <span class="close" id="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+      <div class="mySlides">
+        <img src="./assets/images/book-1.png" alt="book cover" class="light-pic">
+      </div>
+
+      <div class="mySlides">
+        <img src="./assets/images/book-2.png" alt="terminal book cover" class="light-pic">
+      </div>
+
+      <div class="mySlides">
+        <img src="./assets/images/book-3.png" alt="book quote" class="light-pic">
+      </div>
+
+      <div class="mySlides">
+        <img src="./assets/images/book-4.png" alt="book back cover" class="light-pic">
+      </div>
+
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <!-- Thumbnail image controls -->
+      <div class="column">
+        <img class="demo" src="./assets/images/book-1 thumbnail.png" onclick="currentSlide(1)" alt="book cover">
+      </div>
+
+      <div class="column">
+        <img class="demo" src="./assets/images/book-2 thumbnail.png" onclick="currentSlide(2)"
+          alt="terminal book cover">
+      </div>
+
+      <div class="column">
+        <img class="demo" src="./assets/images/book-3 thumbnail.png" onclick="currentSlide(3)" alt="book quote">
+      </div>
+
+      <div class="column">
+        <img class="demo" src="./assets/images/book-4 thumbnail.png" onclick="currentSlide(4)" alt="book back cover">
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footnote">
+      This webpage began as a Frontend Mentor challenge that I completed while incarcerated. I rebuilt the project to
+      represent a future memoir and to demonstrate my ability to work with HTML,
+      CSS, and vanilla JavaScript.
+    </div>
+  </footer>
+
+  <script src="./main.js"></script>
+
+</body>
+
+</html>
